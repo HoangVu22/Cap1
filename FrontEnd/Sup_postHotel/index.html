@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCRoom</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="wraper">
+                <div class="header-content row">
+                    <div class="header-logo">
+                        <!-- <img src="./image/logo.png" alt=""> -->
+                        <h1 style="font-size: 40px; color: #f44336;">BCRoom</h1>
+                    </div>
+                    <div class="header-nav">
+                        <ul class="list_city">
+                            <li><a href="../Sup_home/index.html">Home</a></li>
+                            <li><a href="">Đăng phòng</a></li>
+                            <li><a href="../Sup_myHotel/index.html">Quản lý chỗ nghỉ</a></li>
+                            <li><a href="../Sup_userBooked/index.html">Quản lý đặt phòng</a></li>
+                            <li><a href="../home/index.html">Trở thành người dùng</a></li>
+                            <div class="header-nav-form">
+                                <div class="header-nav-icon">
+                                    <i class="fa-solid fa-user user-icon"></i>
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                                <div style="display: none" class="header-form">
+                                    <div class="header-form-login">
+                                        <ul>
+                                            <li><a href="../signin/index.html">Đăng nhập</a></li>
+                                            <li><a href="../register/index.html">Đăng ký</a></li>
+                                        </ul>
+                                    </div>
+                                    <div style="display: none" class="header-form-logout">
+                                        <div class="content-logout">
+                                            <a href="../profile/index.html" class="avatar-login">
+                                                <div class="header-form-avatar">
+                                                    <!-- <i class="fa-solid fa-circle-user"></i> -->
+                                                    <img src="../image/avatars/avatar_1.jpg" alt="">
+                                                    <div class="header-name">
+                                                        <span>NguyenHoangVu</span>
+                                                        <p>Xem hồ sơ</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <span class="drop-line"></span>
+                                            <div class="header-form-booked">
+                                                <i class="fa-sharp fa-solid fa-clock-rotate-left"></i>
+                                                <span>Đặt phòng của tôi</span>
+                                            </div>
+                                            <div class="header-form-loved">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <span>Danh sách yêu thích</span>
+                                            </div>
+                                            <div class="form-logout">Đăng xuất</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="drop-line1"></span>
+        </header>
+    </div>
+
+    <div class="nav-steps wraper2">
+        <div class="nav-container">
+            <div class="steps">
+                <div class="step-item active">Thông tin cơ bản</div>
+                <!-- <div class="step-item">Hình ảnh </div> -->
+                <div class="step-item">Thông tin phòng</div>
+                <!-- <div class="step-item">Thanh toán</div> -->
+                <div class="line"></div>
+            </div>
+            <div class="step-content active">
+                <div id="basic-information-hotel" class="detail-content">
+                    <h1 class="content-introduce">Hãy bắt đầu bằng cách cho chúng tôi biết tên, địa chỉ cùng chi tiết liên hệ của khách sạn.</h1>
+                    <div class="target-hotel">
+                       <p style="font-size: 26px; font-weight: 500;">Chỉnh sửa khách sạn: <span style="font-size: 15px" class="target-hotel-id"></span></p>
+                       <button style="margin: 20px 0 0 0" class="new-hotel-btn">Làm mới</button>
+                    </div>
+                    <div class="name-hotel">
+                        <p>Tên của khách sạn là gì?</p>
+                        <input data-request="nameHotel" class="request-value name-input" type="text" placeholder="Nhập tên của khách sạn...">
+                        <p class="name-notice">Tên này sẽ được hiển thị tới khách khi họ tìm kiếm chỗ nghỉ.</p>
+                        <div class="name-rating">
+                            <p class="name-star">Xếp hạng sao</p>
+                            <select data-request="starNumber" class="request-value star-rating">
+                                <option value="0">Không áp dụng</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="picture-hotel">
+                        <div class="picture-detail">
+                            <p>Thư viện ảnh</p>
+                            <div class="drag-picture">
+                                <p class="drag-drop1">Kéo và thả để tải file lên</p>
+                                <p style="font-size: 13px; cursor: auto;">Hoặc</p>
+                                <button class="choose-files">Chọn file</button> <br>
+                                <input class="drop-input" type="file" hidden>
+                            </div>
+                            <div class="picture list-hotel-picture">
+    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="detail-contact">
+                        <p>Chi tiết liên hệ của khách sạn là gì?</p>
+                        <div class="name-person-contact">
+                            <p>Tên người liên hệ </p>
+                            <p>Nguyễn Hoàng Vũ</p>
+                            <!-- <input class="name-input" type="text" placeholder="Tên người liên hệ..."> -->
+                        </div>
+                        <div class="phone-content">
+                            <p class="name-notice">Số điện thoại liên lạc (để chúng tôi có thể hỗ trợ đăng ký của Quý vị khi cần)</p>
+                            <div class="phone-contact">
+                                <p>Số điện thoại</p>
+                                <!-- <p>123456789</p> -->
+                                <input data-request="phone" class="request-value phone-input" type="text" placeholder="Nhập số diện thoại của bạn">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description">
+                        <p>Mô tả khách sạn</p>
+                        <textarea name="" id="text-description" cols="77%" rows="10"></textarea>
+                    </div>
+                    <div class="address-hotel">
+                        <p>Khách sạn tọa lạc ở đâu?</p>
+                        <div class="nav-address">
+                            <div class="address">
+                                <div class="address-detail">
+                                    <p>Địa chỉ</p>
+                                    <input data-request="address" class="request-value input-address" type="text" placeholder="Ví dụ: 123 Điện Biên Phủ">
+                                </div>
+                                <!-- <div class="address-detail">
+                                    <p>Dòng địa chỉ 2</p>
+                                    <input type="text" placeholder="Số nhà, tầng, tòa nhà, v.v...">
+                                </div> -->
+                                <div class="address-detail">
+                                    <p>Vùng/Quốc gia</p>
+                                    <input data-request="address" class="request-value" type="text" value="Việt Nam" disabled>
+                                </div>
+                                <div class="address-detail">
+                                    <p>Thành phố</p>
+                                    <input data-request="address" class="request-value" type="text" value="Đà Nẵng" disabled>
+                                </div>
+                            </div>
+                            <div class="address-notice">
+                                <div class="notice-img">
+                                    <img src="https://q.bstatic.com/static/img/join/letter-verification-icon.png" alt="">
+                                    <legend>Địa chỉ của Quý vị quan trọng</legend>
+                                </div>
+                                <p>Vui lòng cung cấp đầy đủ thông tin về địa chỉ của chỗ nghỉ, bao gồm tên và số tòa nhà v.v. Dựa trên thông tin Quý vị cung cấp, có thể chúng tôi sẽ gửi thư qua đường bưu điện để xác minh địa chỉ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="step-content">
+                <div class="detail-content">
+                    <h1>Hình ảnh phòng</h1>
+                    <div class="picture-library">
+                        <p>Thư viện ảnh</p>
+                        <div class="drag-image">
+                            <p class="drag-drop">Kéo và thả để tải file lên</p>
+                            <p style="font-size: 13px; cursor: auto;">Hoặc</p>
+                            <button class="choose-file">Chọn file</button> <br>
+                            <input class="drag-drop-input" type="file" hidden>
+                        </div>
+                        <div class="image">
+
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <div class="step-content">
+                <div id="basic-information-room" class="detail-content">
+                    <h1 class="content-introduce">Hãy nhập thông tin của phòng.</h1>
+                    <div class="choose-satisfied">
+                        <p>Vui lòng chọn</p>
+                        <div class="name-rating">
+                            <p class="name-star">Loại phòng</p>
+                            <select data-request="roomType" class="room-type star-rating request-value">
+                                <!-- <option value="0">Vui lòng chọn</option>
+                                <option value="1">Phòng đơn</option>
+                                <option value="2">Phòng giường đôi</option>
+                                <option value="3">Phòng 2 giường đơn</option>
+                                <option value="4">Phòng 3 người</option>
+                                <option value="5">Phòng 4 người</option>
+                                <option value="6">Phòng gia đình</option> -->
+                            </select>
+                        </div>
+                        <div class="choose-users">
+                            <div class="">
+                                <p>Số lượng người lớn ?</p>
+                                <input data-request="adultNumber" class="request-value adultNumber" type="number" placeholder="0">
+                            </div>
+                            <div class="">
+                                <p>Số lượng trẻ em ?</p>
+                                <input data-request="kidNumber" class="request-value kidNumber" type="number" placeholder="0">
+                            </div>
+                        </div>
+                        <div class="number-room">
+                            <p>Số phòng</p>
+                            <input data-request="numberRoom" class="room-input request-value" type="text" placeholder="Vui lòng nhập số phòng">
+                        </div>
+                    </div>
+                    <div class="picture-library">
+                        <p>Thư viện ảnh</p>
+                        <div class="drag-image">
+                            <p class="drag-drop">Kéo và thả để tải file lên</p>
+                            <p style="font-size: 13px; cursor: auto;">Hoặc</p>
+                            <button class="choose-file">Chọn file</button> <br>
+                            <input class="drag-drop-input" type="file" hidden>
+                        </div>
+                        <div class="image list-room-image">
+
+                        </div>
+                    </div>
+                    <!-- <div class="choose-satisfied">
+                        <p>Tùy chọn giường</p>
+                        <div class="name-rating">
+                            <p class="name-star">Phòng này có loại giường nào?</p>
+                            <select class="star-rating">
+                                <option value="0">Vui lòng chọn</option>
+                                <option value="1">Giường đơn / Rộng 90-130 cm</option>
+                                <option value="2">Giường đôi / 131-150 cm chiều rộng</option>
+                                <option value="3">Giường lớn (cỡ King) / Rộng 151- 180 cm</option>
+                                <option value="4">Giường tầng / Nhiều kích cỡ</option>
+                                <option value="5">Giường sofa / Nhiều kích cỡ</option>
+                                <option value="6">Phòng gia đình</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="convenient-select">
+                        <p>Chọn dịch vụ của bạn</p>
+                        <div class="convenient-section">
+                            <div class="convenient-left">
+                                <!-- <div class="convenient-item">
+                                    <input id="đh" type="checkbox">
+                                    <label for="đh">Điều hòa không khí</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="bt" value="1" type="checkbox">
+                                    <label for="bt">Bồn tắm</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="bts" type="checkbox">
+                                    <label for="bts">Bồn tắm spa</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="wf" type="checkbox">
+                                    <label for="wf">Wifi</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="lv" type="checkbox">
+                                    <label for="lv">Bàn làm việc</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="tl" type="checkbox">
+                                    <label for="tl">Tủ lạnh</label>
+                                </div> -->
+                            </div>
+                            <div class="convenient-right">
+                                <!-- <div class="convenient-item">
+                                    <input id="tv" type="checkbox">
+                                    <label for="tv">Tivi</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="qa" type="checkbox">
+                                    <label for="qc">Tử quần áo</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="ad" type="checkbox">
+                                    <label for="ad">Ấm đun nước điện</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="bc" type="checkbox">
+                                    <label for="bc">Ban công</label>
+                                </div>
+                                <div class="convenient-item">
+                                    <input id="am" type="checkbox">
+                                    <label for="am">Hệ thống cách âm</label>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cancel-booking">
+                        <p>Chính sách hoàn trả</p>
+                        <div class="cancel">
+                            <p class="name-star">Khách hàng có thể hủy đặt phòng trước bao nhiêu ngày để được miễn phí?</p>
+                            <select data-request="policy" data-second-sub-request="expireTime" class="star-rating request-value expireTime">
+                                <option value="0">Vui lòng chọn</option>
+                                <option value="1">Cùng ngày nhận phòng</option>
+                                <option value="2">1 ngày</option>
+                                <option value="3">2 ngày</option>
+                                <option value="4">3 ngày</option>
+                                <option value="5">7 ngày</option>
+                                <option value="6">14 ngày</option>
+                            </select>
+                        </div>
+                        <div class="cancel">
+                            <p class="name-star">nếu không khách hàng sẽ trả 100%</p>
+                            <select data-request="policy" data-second-sub-request="condition" class="star-rating request-value condition">
+                                <option value="0">Vui lòng chọn</option>
+                                <option value="1">Của đêm đầu tiên</option>
+                                <option value="2">Của tổng đợt lưu trú</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="basic-price">
+                        <p>Giá cơ bản mỗi ngày</p>
+                        <div class="description-price">
+                            <p>Đây là giá thấp nhất mà chúng tôi tự động áp dụng đối với phòng này cho tất cả các ngày. Trước khi chỗ nghỉ online, Quý vị có thể cài đặt giá theo mùa trong trang dashboard của chỗ nghỉ.</p>
+                        </div>
+                        <div class="price-input">
+                            <span>VNĐ / đêm</span>
+                            <input data-request="price" class="request-value price" type="number" name="" id="" placeholder="0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="step-content">
+                <div class="detail-content">
+                    <h1 class="payment">Thanh toán</h1>
+                    <p class="payment-title">Vui lòng nêu phương thức thanh toán Quý vị chấp nhận.</p>
+                    <div class="choose-payment">
+                        <p>Lựa chọn thanh toán của quý khách</p>
+                        <p class="question-payment">Quý vị có thể thu tiền qua thẻ tín dụng tại chỗ nghỉ không?</p> 
+                        <div class="radio-block-1">
+                            <div class="radio-yes">
+                                <input id="yes" name="radio" class="radio-input" type="radio">
+                                <label for="yes">Có</label>
+                            </div>
+                            <div class="radio-no">
+                                <input id="no" name="radio" class="radio-input" type="radio">
+                                <label for="no">Không</label>
+                            </div>
+                        </div>
+                        <div class="creditcard-section">
+                            <div class="creditcard-left">
+                                <div class="creditcard-item">
+                                    <input id="momo" type="checkbox">
+                                    <img src="../image/creditcard/momo.png" alt="">
+                                    <label for="momo">MoMo</label>
+                                </div>
+                                <div class="creditcard-item">
+                                    <input id="paypal" type="checkbox">
+                                    <img src="../image/creditcard/payPal.png" alt="">
+                                    <label for="paypal">PayPal</label>
+                                </div>
+                                <div class="creditcard-item">
+                                    <input id="zaloPay" type="checkbox">
+                                    <img src="../image/creditcard/ZaloPay.png" alt="">
+                                    <label for="zaloPay">ZaloPay</label>
+                                </div>
+                            </div>
+                            <div class="creditcard-right">
+                                <div class="creditcard-item">
+                                    <input id="agribank" type="checkbox">
+                                    <img src="../image/creditcard/agribank.png" alt="">
+                                    <label for="agribank">Agribank</label>
+                                </div>
+                                <div class="creditcard-item">
+                                    <input id="vietcombank" type="checkbox">
+                                    <img src="../image/creditcard/Vietcombank.jpg" alt="">
+                                    <label for="vietcombank">Vietcombank</label>
+                                </div>
+                                <div class="creditcard-item">
+                                    <input id="techcombank" type="checkbox">
+                                    <img src="../image/creditcard/Techcombank.png" alt="">
+                                    <label for="techcombank">Techcombank</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cash-section">
+                            <p>Chúng tôi sẽ thông báo với khách rằng Quý vị chỉ chấp nhận thanh toán bằng tiền mặt.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="save-next wraper2">
+            <button class="save-inf">Lưu và Thoát</button>
+            <div class="pre-next">
+                <div class="pre-btn"> 
+                    <button class="previous-button">Quay lại</button>
+                </div>
+                <div class="go-to-next">
+                    <button class="next-button">Tiếp tục</button>
+                </div>
+                <div class="finish">
+                    <button class="finish-button">Hoàn tất</button>
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+
+
+
+    <!-- ------------------------------------------------------------------ -->
+    <script src="./js/main.js"></script>
+    <script src="../commonJS/header.js"></script>
+    <!-- <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            Validator({
+            form: '#form-2',
+            formGroupSelector: '.form-group',
+            errorSelector: '.form-message',
+            rules: [
+                Validator.isEmail('#email'),
+                Validator.minLength('#password', 6),
+            ],
+            onSubmit: function (data) {
+                // Call API
+                console.log(data);
+            }
+            });
+        });
+    </script> -->
+</body>
+</html>

@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BCRoom</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div class="main">
+        <header>
+            <div class="wraper">
+                <div class="header-content row">
+                    <div class="header-logo">
+                        <!-- <img src="./image/logo.png" alt=""> -->
+                        <h1 style="font-size: 40px; color: #f44336">BCRoom</h1>
+                    </div>
+                    <div class="header-nav">
+                        <ul class="list_city">
+                            <li><a href="../home/index.html">Home</a></li>
+                            <li><a href="">Dịch vụ</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="../Sup_home/index.html">Trở thành nhà cung cấp</a></li>
+                            <div class="header-nav-form">
+                                <div class="header-nav-icon">
+                                    <i class="fa-solid fa-user user-icon"></i>
+                                    <i class="fa-solid fa-bars"></i>
+                                </div>
+                                <div style="display: none" class="header-form">
+                                    <div class="header-form-login">
+                                        <ul>
+                                            <li><a href="../signin/index.html">Đăng nhập</a></li>
+                                            <li><a href="../register/index.html">Đăng ký</a></li>
+                                        </ul>
+                                    </div>
+                                    <div style="display: none" class="header-form-logout">
+                                        <div class="content-logout">
+                                            <a href="../profile/index.html" class="avatar-login">
+                                                <div class="header-form-avatar">
+                                                    <!-- <i class="fa-solid fa-circle-user"></i> -->
+                                                    <img src="../image/avatars/avatar_1.jpg" alt="">
+                                                    <div class="header-name">
+                                                        <span>NguyenHoangVu</span>
+                                                        <p>Xem hồ sơ</p>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                            <span class="drop-line"></span>
+                                            <div class="header-form-booked">
+                                                <i class="fa-sharp fa-solid fa-clock-rotate-left"></i>
+                                                <span>Đặt phòng của tôi</span>
+                                            </div>
+                                            <div class="header-form-loved">
+                                                <i class="fa-regular fa-heart"></i>
+                                                <span>Danh sách yêu thích</span>
+                                            </div>
+                                            <div class="form-logout">Đăng xuất</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <span class="drop-line1"></span>
+        </header>
+        
+        <div class="profile wraper2">
+            <div class="profile-left">
+                <div class="profile-left-item">
+                    <div class="account-info">
+                        <div class="account-info-img">
+                            <img src="../image/avatars/avatar_1.jpg" alt="">
+                            <i class="fa-solid fa-camera"></i>
+                        </div>
+                        <p>Nguyễn Hoàng Vũ</p>
+                    </div>
+                    <div class="account-sidebar">
+                        <div class="account-sidebar-link active">
+                            <i style="pointer-events: none;" class="fa-solid fa-id-card"></i>
+                            <span>Hồ sơ của tôi</span>
+                        </div>
+                        <div class="account-sidebar-link">
+                            <i style="pointer-events: none;" class="fa-solid fa-clock-rotate-left"></i>
+                            <span>Đặt phòng của tôi</span>
+                        </div>
+                        <div class="account-sidebar-link">
+                            <i style="pointer-events: none;" class="fa-solid fa-ticket"></i>
+                            <span>Coupon của tôi</span>
+                        </div>
+                        <div class="account-sidebar-link">
+                            <i style="pointer-events: none;" class="fa-regular fa-heart"></i>
+                            <span>Danh sách yêu thích</span>
+                        </div>
+                        <div class="form-line"></div>
+                        <div class="account-sidebar-link">
+                            <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                            <span>Đăng xuất</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-genaral" style="display: block;">
+                <div class="profile-right">
+                    <div class="profile-right-top">
+                        <h2>Hồ sơ của tôi</h2>
+                        <button>Chỉnh sửa</button>
+                    </div>
+    
+                    <div class="profile-right-bottom">
+                        <form class="form-profile">
+                            <div class="form-profile-info">
+                                <label for="">Số điện thoại</label>
+                                <div class="form-profile-name">0932424250</div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Họ và tên</label>
+                                <div class="form-profile-name">Nguyễn Hoàng Vũ</div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Email</label>
+                                <div class="form-profile-name">hoangvu22062001@gmail.com</div>
+                            </div>
+                            <!-- <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Ngày Sinh</label>
+                                <div class="form-profile-name">22-06-2001</div>
+                            </div> -->
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Giới tính</label>
+                                <div class="form-profile-name">Nam</div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Địa chỉ</label>
+                                <div class="form-profile-name">Đà Nẵng</div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Tài khoản liên kết</label>
+                                <div class="form-profile-name">
+                                    <div class="form-profile-connect">
+                                        <div class="form-profile-icon">
+                                            <img src="https://go2joy.vn/images/icons/facebook.svg" alt="">
+                                            <p>Facebook</p>
+                                        </div>
+                                        <div class="form-profile-link">
+                                            <a href="">Liên kết</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-profile-connect">
+                                        <div class="form-profile-icon">
+                                            <img src="https://go2joy.vn/images/icons/google.svg" alt="">
+                                            <p>Google</p>
+                                        </div>
+                                        <div class="form-profile-link">
+                                            <a href="">Hủy liên kết</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="profile-right-edit">
+                    <div class="profile-right-top">
+                        <h2>Hồ sơ của tôi</h2>
+                        <div class="profile-save">
+                            <button class="profile_update">Lưu</button>
+                            <p>Hủy</p>
+                        </div>
+                    </div>
+    
+                    <div class="profile-right-bottom">
+                        <form class="form-profile form-profile-edit">
+                            <div class="form-profile-info">
+                                <label for="">Số điện thoại</label>
+                                <!-- <div class="form-profile-name">0932424250</div> -->
+                                <div class="form-profile-input">
+                                    <input data-request="phone" class="form-profile-text update-profile-request" type="text" placeholder="Nhập số điện thoại của bạn">
+                                </div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Họ và tên</label>
+                                <div class="form-profile-input">
+                                    <input data-request="username" class="form-profile-text update-profile-request" type="text" placeholder="Nhập họ tên của bạn">
+                                </div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Email</label>
+                                <div class="form-profile-input">
+                                    <input data-request="email" class="form-profile-text update-profile-request" type="text" placeholder="Nhập email của bạn">
+                                </div>
+                            </div>
+                            <!-- <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Ngày Sinh</label>
+                                <div class="form-profile-input">
+                                    <input class="form-profile-lable" type="text" placeholder="Nhập ngày">
+                                    <input class="form-profile-lable" type="text" placeholder="Nhập tháng">
+                                    <input class="form-profile-lable" type="text" placeholder="Nhập năm">
+                                </div>
+                            </div> -->
+                            <div class="form-line"></div>
+                            <!-- <div class="form-profile-info">
+                                <label for="">Giới tính</label>
+                                <div class="form-profile-input">
+                                    <select name="" id="" class="form-profile-text">
+                                        <option class="form-gender" value="">Chọn giới tính của bạn</option>
+                                        <option value="">Nam</option>
+                                        <option value="">Nữ</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Địa chỉ</label>
+                                <div class="form-profile-input">
+                                    <input data-request="address" class="form-profile-text update-profile-request" type="text" placeholder="Nhập địa chỉ của bạn">
+                                </div>
+                            </div>
+                            <div class="form-line"></div>
+                            <div class="form-profile-info">
+                                <label for="">Tài khoản liên kết</label>
+                                <div class="form-profile-name">
+                                    <div class="form-profile-connect">
+                                        <div class="form-profile-icon">
+                                            <img src="https://go2joy.vn/images/icons/facebook.svg" alt="">
+                                            <p>Facebook</p>
+                                        </div>
+                                        <div class="form-profile-link">
+                                            <a href="">Liên kết</a>
+                                        </div>
+                                    </div>
+                                    <div class="form-profile-connect">
+                                        <div class="form-profile-icon">
+                                            <img src="https://go2joy.vn/images/icons/google.svg" alt="">
+                                            <p>Google</p>
+                                        </div>
+                                        <div class="form-profile-link">
+                                            <a href="">Hủy liên kết</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="profile-right-booked profile-genaral">
+                <div class="" style="display: none;">
+                    <h2>Đặt phòng của tôi</h2>
+                    <img src="https://go2joy.vn/_nuxt/search-not-found.47b1f6f6.png" alt="">
+                    <h3>Bạn chưa có đặt phòng</h3>
+                    <p>Hãy đặt phòng để tận hưởng nhé</p>
+                </div>
+                <div class="supplierPages wraper">
+                    <div class="container-residence">
+                        <h2>Đặt phòng của tôi</h2>
+                        <table class="container-nav">
+                            <tr>
+                                <th>KHÁCH SẠN</th>
+                                <th>NGÀY ĐẶT</th>
+                                <th>NGÀY TRẢ</th>
+                                <th>TỔNG TIỀN</th>
+                                <th>TRẠNG THÁI</th>
+                                <th>TÙY CHỌN</th>
+                            </tr>
+                            <tr class="list-residence">
+                                <td class="list-content list-status">
+                                    <span>Bridge Report</span> <br>
+                                    <span>Phòng 01</span> <br>
+                                    <span>Phòng giường đôi</span>
+                                </td>
+                                <td class="list-content list-info"> 
+                                    <span>11-17-2022</span>
+                                </td>
+                                <td class="list-content list-id">
+                                    <span>11-18-2022</span>
+                                </td>
+                                <td class="list-content list-price">
+                                    <span>400000 VNĐ</span>
+                                </td>
+                                <td class="list-content list-wait">
+                                    <span>Đang chờ</span>
+                                </td>
+                                <td class="list-content list-cancel">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </td>
+                            </tr>
+            
+                            <tr class="list-residence">
+                                <td class="list-content list-status">
+                                    <span>Bridge Report</span> <br>
+                                    <span>Phòng 01</span> <br>
+                                    <span>Phòng giường đôi</span>
+                                </td>
+                                <td class="list-content list-info"> 
+                                    <span>11-17-2022</span>
+                                </td>
+                                <td class="list-content list-id">
+                                    <span>11-18-2022</span>
+                                </td>
+                                <td class="list-content list-price">
+                                    <span>400000 VNĐ</span>
+                                </td>
+                                <td class="list-content list-wait">
+                                    <span>Đang chờ</span>
+                                </td>
+                                <td class="list-content list-cancel">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </td>
+                            </tr>
+            
+                            <tr class="list-residence">
+                                <td class="list-content list-status">
+                                    <span>Bridge Report</span> <br>
+                                    <span>Phòng 01</span> <br>
+                                    <span>Phòng giường đôi</span>
+                                </td>
+                                <td class="list-content list-info"> 
+                                    <span>11-17-2022</span>
+                                </td>
+                                <td class="list-content list-id">
+                                    <span>11-18-2022</span>
+                                </td>
+                                <td class="list-content list-price">
+                                    <span>400000 VNĐ</span>
+                                </td>
+                                <td class="list-content list-wait">
+                                    <span>Đang chờ</span>
+                                </td>
+                                <td class="list-content list-cancel">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-right-coupon profile-genaral">
+                <h2>Coupon của tôi</h2> 
+                <div class="my-coupon">
+                    <div class="coupon-img">
+                        <img src="../image/places/HoaVang.jpg" alt="">
+                    </div>
+                    <div class="coupon-content">
+                        <div class="coupon-content-top">
+                            <p>GIẢM 50% - TỐI ĐA 50K</p>
+                        </div>
+                        <div class="coupon-content-bottom">
+                            <div class="closing-date">
+                                <span>Giảm 50%</span>
+                                <p>Hết hạn 1/1/2023</p>
+                            </div>
+                            <div class="condition">
+                                <button class="condition-btn">Điều kiện</button>
+                            </div>
+                           
+                        </div>
+                        <div style="display: none;" class="condition-content">
+                            <!-- <div class="my-coupon">
+                                <div class="coupon-img">
+                                    <img src="../image/places/HoaVang.jpg" alt="">
+                                </div>
+                                <div class="coupon-content">
+                                    <div class="coupon-content-top">
+                                        <p>GIẢM 50% - TỐI ĐA 50K</p>
+                                    </div>
+                                    <div class="coupon-content-bottom">
+                                        <div class="closing-date">
+                                            <span>Giảm 50%</span>
+                                            <p>Hết hạn 1/1/2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="coupon-description">
+                                <ul>
+                                    <li>Chúc mừng bạn đã nhận được <b>Coupon 50%</b> (tối đa 50.000đ), <b>hạn sử dụng trong 7 ngày kể từ ngày nhận coupon.</b></li>
+                                    <li>Áp dụng tại các <b>khách sạn trong danh sách.</b></li>
+                                    <li>Coupon không được áp dụng cùng với chương trình Giảm giá đặc biệt.</li>
+                                    <li>Thời gian đặt phòng: <b>Từ Thứ Hai đến Chủ Nhật.</b></li>
+                                    <li>Coupon không được quy đổi thành tiền mặt, không được phép chuyển nhượng dưới bất kỳ hình thức nào.</li>
+                                    <li>BCRoom có quyền từ chối trả phí khuyến mãi nếu phát hiện gian lận hoặc vi phạm các điều khoản của chương trình khuyến mãi này.</li>
+                                </ul>
+                            </div>
+                            <div class="room-close">
+                                <i class="fa-solid fa-xmark"></i>
+                            </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-right-loved profile-genaral">
+                <h2>Khách sạn yêu thích</h2>
+                <img src="https://go2joy.vn/_nuxt/search-not-found.47b1f6f6.png" alt="">
+                <h3>Chưa có khách sạn yêu thích</h3>
+                <p>Khi bạn tìm thấy khách sạn ưng ý, hãy nhấp vào biểu tượng trái tim để lưu lại.</p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+    <script src="../commonJS/header.js"></script>
+</body>
+</html>
